@@ -1,0 +1,740 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* transition: .20s ease-in-out; */
+        /* transition: smooth; */
+    }
+    @font-face {
+        font-family: myFirstFont;
+        src: url(SF-Pro-Display-Semibold.ttf);
+        font-weight: bold;
+    }
+    @font-face {
+        font-family: reg;
+        src: url(SF-Pro-Display-Regular.ttf);
+    }
+    @font-face {
+        font-family: text-reg;
+        src: url(sf-pro-text-regular.ttf);
+    }
+    @font-face {
+        font-family: text-med;
+        src: url(sf-pro-text-medium.ttf);
+    }
+    body,html{
+        width: 100%;
+        height: 100%;
+        font-style: normal;
+    }
+    nav{
+        background-color: rgb(26, 26, 26);
+        height:45px;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        position: relative;
+    }
+    nav ul{
+        display: flex;
+        text-decoration: none;
+        max-width: 850px;
+        width: 100%;
+        color: #B2B2B3;
+        justify-content: space-between;
+        font-size: 12px;
+        transition: .70s ease-in-out;
+        z-index: 10;
+    }
+    nav ul li{
+        display: block;
+        letter-spacing: -0.1px;
+        padding: 0 -8px;
+        line-height: 45px;
+        transition: .70s ease-in-out;
+        z-index: 10;
+        font-weight: 400;
+        font-family: text-med;
+    }
+    #tandh{
+        width: 65px;
+    }
+
+    .drop1 p,.drop2 p,.droptoggle p{
+        color: #828287;
+        padding-bottom: 15px ;
+        font-size: 13px ;
+        font-family: text-reg;
+    }
+
+    .drop1 li{
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 24px;
+        line-height: 37px;
+        width: 250px;
+    }
+    .drop2 li,.drop2 li,.droptoggle li{
+        list-style-type: none;
+        font-size: 12px;
+        line-height: 30px;
+        font-family: text-med;
+    }
+    .drop2 span{
+        line-height: 25px;
+    }
+    .dropcont{
+        width: 50%;
+        z-index: 9999;
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+    }
+    .dropcont2{
+        padding: 20px;
+        width: 50%;
+    }
+    .droptoggle{
+        display: none;
+        width: 50%;
+    }
+
+    #store,#Mac,#iPad,#iPhone,#air,#tv,#Watch,#enter,#access,#Sup{
+        max-width: 1004px;
+        width: 100%;
+        position:absolute;
+        display: flex;
+        z-index: 10;
+        color: white;
+        padding-top: 2vw;
+        padding-bottom: 5vw;
+        opacity: 0;
+        transition: ease-in .350s;
+        font-family:myfirstfont;
+    }
+
+    #dropdownmenu{
+        width: 100%;
+        position: absolute;
+        background-color:  rgb(26, 26, 26);
+        height: 75vh;
+        top:-100%;
+        z-index: 9;
+        display: flex;
+        justify-content: center;
+        transition: ease-in .300s;
+    }
+
+    .content{
+        display: flex;
+        max-width: 1010px;
+        width: 100%;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    .logo{
+        line-height: 45px;
+        font-size: larger;
+        text-decoration: none;
+        list-style-type: none;
+        transition: 0.3s;
+        z-index: 0;
+        padding: 0 16px;
+    }
+
+    #sicon{
+        padding: 0 16px;
+        line-height: 45px;
+    }
+    #cart{
+        padding: 0 16px;
+        line-height: 45px;
+    }
+    #sicon2{
+        display: none;
+        padding: 0 16px;
+        line-height: 45px;
+    }
+    #cart2{
+        display: none;
+        padding: 0 16px;
+        line-height: 45px;
+    }
+    #bars{
+        line-height: 40px;
+        padding: 0px 16px;
+        display: none;
+        color: white;
+    }
+    #check{
+        display: none;
+    }
+    #check:checked ~ #displaybox {
+        transition: .7s ease-in-out;
+        top: 45px;
+        opacity: 1;
+    }
+
+    .nav2{
+        color: white;
+        background-color:rgb(32, 31, 31);
+        text-align: center;
+        height: auto;
+        width: 100%;
+        letter-spacing: -0.4px;
+    }
+    .nav2 p{
+        font-size: 14px;
+        padding:10px 0;
+        width: 100%;
+        display: inline-block;
+        line-height: 20.6px;
+        font-weight: semi-bold;
+        font-family: text-reg;
+        
+    }
+    .nav2 span a{
+        color: #06c;
+        text-decoration: none;
+        letter-spacing: inherit;
+    }
+    .nav2 span a:hover{
+        text-decoration: underline;
+    }
+    .mob{
+        display: none;
+        margin: auto;
+        height: 350px;
+    }
+    .imageholder{
+        color: rgb(245, 245, 247);
+        background-color: rgb(0, 0, 0);
+        height: 616px;
+        overflow: hidden;
+        position: relative;
+    }
+    .main{
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        left: 58%;
+        transform: translate(-50%,-50%);
+        width: 900px;
+    
+    }
+    .span{
+        color: rgb(41, 151, 255);
+        margin: auto;
+        text-align: center;
+        font-size: larger
+    }
+    .heading{
+        justify-content: space-around;
+        text-align: center;
+        padding: 50px 50px;
+        letter-spacing: -0.8px;
+    }
+    .heading h1{
+        letter-spacing: -.005em;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 60px;
+        font-family: myfirstfont;
+    }
+    .heading h3{
+        font-size: 28px;
+        letter-spacing: -.004em;
+        line-height: 39px;
+        font-family: reg;
+        font-weight: 300;
+    }
+    .links{
+        margin: auto;
+        display:flex;
+        line-height:40px;
+        width:250px;
+        margin-top: -0.50em;
+        justify-content: space-around;
+    }
+    .links p{
+        font-family: reg;
+        padding: 0px;
+        font-weight: 400;
+        font-size: 21px;
+        letter-spacing: .011em;
+        
+    }
+    .links p:hover{
+        text-decoration: underline;
+
+    }
+    .section2{
+        height: 600px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url('https://www.apple.com/v/home/bk/images/heroes/iphone-15/hero_iphone15_announce__uuemlcwczn6u_large_2x.jpg')
+    }
+    .section3{
+        height: 750px;
+        width: 100%;
+        color: white;
+        justify-content: center;
+        position: relative;
+        background-size: cover;
+        background-clip: content-box;
+        background-position: center;
+        background-image: url('https://www.apple.com/v/home/bk/images/heroes/apple-watch-series-9-anim/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg')
+    }
+    .sec3img{
+        position: absolute;
+        width: 190px;
+        left: 50%;
+        top: 74.3%;
+        transform: translate(-50%,-74.3%);
+    }
+    .sec3{
+        position: absolute;
+        bottom:15%;
+        display: flex;
+        width: 100%;
+        height: auto;
+        /* background-color: #06c; */
+        z-index: 9999999;
+        justify-content: center;
+    }
+    .sec3 h3{
+        font-family: text-med;
+        font-size: 28px;
+        line-height: 1.17648;
+        position: absolute;
+        font-weight: 100;
+        letter-spacing: -1.8px;
+        bottom: 16px;
+        display: flex;
+        justify-self: center;
+        text-align: center;
+    }
+    .sec3btns{
+        display: flex;
+        position: absolute;
+        gap: 20px;
+    }
+    .sec3btns button{
+        font-family: text-reg;
+        font-size: 17px;
+        border-radius: 40px;
+        padding-top: 11px;
+        padding-bottom: 15px;
+        letter-spacing: -.022em;
+        line-height: 1.17648;
+        padding-left: 21px ;
+        padding-right: 21px ;
+        bottom: 13px;
+    }
+    .section4{
+        display: flex;
+        width: 100vw;
+        /* height: 600px; */
+        flex-wrap:wrap ;
+        justify-content: space-around;
+
+
+    }
+    .sec4-part1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 9px;
+        padding-right: 9px;
+        height: auto;
+        width: 100%;
+    }
+    .sec4-1{
+        background-image: url('https://www.apple.com/v/home/bk/images/promos/macbook-pro-14-and-16/promo_mbp__ek7p477bkp6q_large.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 49%;
+        height: 600px;
+        position: relative;
+    }
+    .sec4-2{
+        background-image: url('https://www.apple.com/in/home/promos/ipad/images/promo_ipad__fioegapg12qi_large.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 49%;
+        height:600px;
+        position: relative;
+    }
+    .sec4-3{
+        background-image: url('https://www.apple.com/v/home/bk/images/promos/airpods-pro/promo_airpods_pro_order__d8xv36p4uwae_large_2x.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height:600px;
+        width: 49%;
+        position: relative
+    }
+    .sec4-4{
+        background-image: url('https://www.apple.com/v/home/bk/images/promos/homepod-mini/tile_homepod_mini__b73w4z3ljymu_large.jpg');
+        background-size: cover;
+        height:600px;
+        background-position: center;
+        width: 49%;
+        position: relative;
+    }
+    .sec4-5{
+        background-image: url('https://www.apple.com/v/home/bk/images/promos/macbook-air/promo_macbookair__fywl7i82fueu_large.png');
+        height:600px;
+        background-size: cover;
+        background-position: center;
+        width: 49%;
+        position: relative;
+    }
+    .sec4-6{
+        background-image: url('https://www.apple.com/v/home/bk/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large.jpg');
+        height:600px;
+        background-size: cover;
+        background-position: center;
+        width: 49%;
+        position: relative;   
+    }
+    .headings{
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%,-12%);
+        text-align: center;
+    }
+    .headings .links p{
+        font-size: 17px;
+        color: #0066CC;
+        line-height: 21px;
+        letter-spacing: -0.4px;
+        margin-top: 0.7em;
+        font-family: text-reg;
+    }
+    .headings .links .span svg{
+        margin-top: 4px;
+        color: red;
+    }
+    .headings .links{
+        width: 210px;
+        margin-top: 2.5px;
+    }
+    .sec4-6 .headings .links{
+        width: 300px;
+    }
+    .headings h1{
+        font-family: myfirstfont;
+        font-size: 40px;
+        line-height: 44px;
+    }
+    .headings h3{
+        font-family: reg;
+        font-size: 21px;
+        font-weight: lighter;
+        line-height: 26px;
+        letter-spacing: 0.3px;
+        margin-top: 3px;
+    }
+    .footer{
+        height: 720px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    .footcon{
+        max-width: 80vw;
+        font-size: 12px;
+        color: #727273;
+        width: 100%;
+        line-height: 16px;
+        font-family: text-reg;
+    }
+    .end{
+        display: flex;
+        border-top: 1.5px black solid;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .end-1{
+        margin-top: 20px;
+    }
+    .end-2{
+        border-bottom: 1.5px black solid;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .end h3{
+        color: black;
+        margin-top: 21px;
+        font-family: text-reg;
+    }
+    .end h5{
+        /* line-height: 26px; */
+        font-size: 12px;
+        margin-top: 13px;
+        font-family: text-reg;
+    }
+    .end h5:hover{
+        text-decoration: underline;
+    }
+    .lastline{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 14px;
+        padding-bottom: 15px;
+    }
+    .ll{
+        justify-content: space-between;
+        width: 350px;
+    }
+    
+    @media(max-width:1075px) {
+        .heading h1{
+            font-size: 48px;
+            letter-spacing: -.023em;
+        }
+        .heading p{
+            font-size: 24px;
+            letter-spacing: -.014em;
+        }
+        .links{
+            display: flex;
+            width: 220px;
+            line-height: 38px;
+            margin-top: -0.65em;
+        }
+        .links p{
+            font-size: 17px;
+            letter-spacing: -.009em;
+        }
+        .main{
+            width: 760px;
+        }
+    }
+   
+    @media(max-width:936px){
+        nav ul li{
+            font-size: 12px;
+            padding: 0 -12px;
+        }
+     
+    }
+    @media(max-width:863px){
+        #displaybox{
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            height: 99vh;
+            justify-content:flex-start;
+            background: rgb(29, 29, 31);
+            position: fixed;
+            top: -120%;
+            transition: .10s;
+            padding: 30px 40px;
+            z-index: 3;
+            transition: all .7s ease-in;
+        }
+        .drop1{
+            width: 82vw;
+            display: block;
+        }
+        .droptoggle{
+            display: inline-block;
+            width: 400px;
+        }
+        .dropcont .drop2{
+            display: none;
+        }
+        .drop2{
+            width: 300px;
+        }
+        .dropcont{
+            max-width: 600px;
+            width: 100%;
+            display: block;
+        }
+        .dropcont2{
+            height: 100%;
+            display: flex;
+            max-width:  280px;
+            width: 100%;
+        }
+        nav ul li{
+            display: block;
+            line-height:50px;
+            font-size: x-large;
+            font-weight: bolder;
+            width: 100vw;
+        }
+        #store,#Mac,#iPad,#iPhone,#air,#tv,#Watch,#enter,#access,#Sup{
+            max-width: 855px;
+            width: 100%;
+            position:absolute;
+            display: flex;
+            flex-wrap: wrap;
+            z-index: 10;
+            color: white;
+            opacity: 0;
+            transition: ease-in .350s;
+            font-family:myfirstfont;
+        }
+        #dropdownmenu{
+            width: 100vw;
+            position: absolute;
+            background-color:  rgb(26, 26, 26);
+            height: 100vh;
+            top:-120%;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            transition: ease-in .300s;
+        }
+        #sicon,#cart{
+            display: none;
+        }
+        #sicon2,#cart2{
+            display: block;
+            line-height: 45px;
+        }
+        .logo{
+            margin-right: auto
+        }
+        #bars{
+            display: block;
+            float: right;
+            z-index: 100;
+            line-height: 45px;
+        }
+        .nav2{
+            height: auto;
+        }
+        .heading{
+            font-size: smaller;
+        }
+    }
+    @media(max-width:771px){
+        .sec4-part1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-left: 0px;
+            padding-right: 0px;
+            height: auto;
+            width: 100vw;
+        }
+        .sec4-1{
+            background-image: url('https://www.apple.com/v/home/bk/images/promos/macbook-pro-14-and-16/promo_mbp__ek7p477bkp6q_small_2x.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 600px;
+            position: relative;
+        }
+        .sec4-2{
+            background-image: url('https://www.apple.com/in/home/promos/ipad/images/promo_ipad__fioegapg12qi_small_2x.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height:600px;
+            position: relative;
+        }
+        .sec4-3{
+            background-image: url('https://www.apple.com/v/home/bk/images/promos/airpods-pro/promo_airpods_pro_order__d8xv36p4uwae_small_2x.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height:600px;
+            width: 100vw;
+            position: relative;
+        }
+        .sec4-4{
+            background-image: url('https://www.apple.com/v/home/bk/images/promos/homepod-mini/tile_homepod_mini__b73w4z3ljymu_small_2x.jpg');
+            background-size: cover;
+            height:600px;
+            background-position: center;
+            width: 100vw;
+            position: relative;
+        }
+        .sec4-5{
+            background-image: url('https://www.apple.com/v/home/bk/images/promos/macbook-air/promo_macbookair__fywl7i82fueu_small_2x.png');
+            height:600px;
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            position: relative;
+        }
+        .sec4-6{
+            background-image: url('https://www.apple.com/v/home/bk/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_small_2x.jpg');
+            height:600px;
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            position: relative;
+        }
+
+        
+    }
+    @media(max-width:735px){
+        .main{
+            display: none;
+        }
+        .mob{
+            display: block;
+            height: 515px;
+            width: 125px;
+            margin-top: -57px;
+        }
+        .nav2 p{
+            font-size: 12px;
+            padding: 10px 0px;
+            text-align: center;
+            line-height: 16px;
+            max-width: 410px;
+            width: 100%;
+            margin: auto;
+        }
+        .heading{
+            margin-top: -9px;
+        }
+        .heading h1{
+            font-size: 33px;
+            letter-spacing: -.023em;
+
+        }
+        .heading p{
+            font-size: 1.3em;
+            font-weight: 500;
+            padding: 4px 0;
+        }
+        .links{
+            margin-top: -1.45em;
+        }
+    }
+    @media(max-width:479px){
+        .heading{
+            max-width: 479px;
+            padding: 50px 0;
+            margin: auto;
+            width: 100%;
+        }
+       
+    }
+    @media(max-width:445px){
+        .end{
+            display: none;
+        }
+    }
+    @media(max-width:300px){
+        .nav2{
+            height: auto;
+            font-size: smaller;
+        }
+    }
+    
